@@ -14,13 +14,13 @@ source:
 build:
   number: 0
   script: python setup.py install --record record.txt
-  skip: True  # [py<35]
+  noarch: python
 
 requirements:
   build:
-    - python
+    - python >=3.5
   run:
-    - python
+    - python >=3.5
     - numpy >=1.11
     - scipy
     - nbformat
