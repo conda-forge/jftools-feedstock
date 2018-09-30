@@ -12,13 +12,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --record record.txt
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   noarch: python
 
 requirements:
   build:
     - python >=3.5
+  host:
+    - pip
   run:
     - python >=3.5
     - numpy >=1.11
