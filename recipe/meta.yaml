@@ -1,6 +1,6 @@
 {% set name = "jftools" %}
-{% set version = "0.4.1" %}
-{% set sha256 = "87539e752288fa8d943a6a8476dbb37922aaa240885565880158aa7daf49ba0b" %}
+{% set version = "0.4.2" %}
+{% set sha256 = "e9b3f145c2e79a7c12577009d8ce3df8809ecef4dc356730c3e2bf6a991a1bc8" %}
 
 package:
   name: {{ name|lower }}
