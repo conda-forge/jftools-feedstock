@@ -1,43 +1,47 @@
 {% set name = "jftools" %}
 {% set version = "0.4.2" %}
-{% set sha256 = "e9b3f145c2e79a7c12577009d8ce3df8809ecef4dc356730c3e2bf6a991a1bc8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jftools-{{ version }}.tar.gz
+  sha256: e9b3f145c2e79a7c12577009d8ce3df8809ecef4dc356730c3e2bf6a991a1bc8
 
 build:
-  number: 1
-  script: python setup.py install --record record.txt
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
-  build:
-    - python >=3.5
+  host:
+    - python >=3.7
+    - flit-core >=3.2,<4
+    - pip
   run:
-    - python >=3.5
-    - numpy >=1.11
-    - scipy
-    - nbformat
-    - ipython
-    - numba
-    - matplotlib-base
-    - qutip
+    - python >=3.7
+    - numpy >=1.15
+    - scipy >=1.0
+    - numba >=0.49
+    - nbformat >=5.0
+    - ipython >=7.0
+    - matplotlib-base >=3.0
+    - qutip >=4.0
+
 test:
   imports:
     - jftools
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/jfeist/jftools
+  summary: Collection of small useful helper tools for Python by Johannes Feist.
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  summary: 'Collection of small useful helper tools for Python by Johannes Feist'
 
 extra:
   recipe-maintainers:
