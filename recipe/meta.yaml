@@ -1,5 +1,5 @@
 {% set name = "jftools" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jftools-{{ version }}.tar.gz
-  sha256: e9b3f145c2e79a7c12577009d8ce3df8809ecef4dc356730c3e2bf6a991a1bc8
+  sha256: 4d0d36b277a457103a457d54846ee93ea3d823ea0cbc953f7e4b1044b4312c72
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
