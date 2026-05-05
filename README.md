@@ -1,7 +1,7 @@
 About jftools-feedstock
 =======================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jftools-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-forge_jftools-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/jfeist/jftools
 
