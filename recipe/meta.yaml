@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jftools-{{ version }}.tar.gz
-  sha256: 4d0d36b277a457103a457d54846ee93ea3d823ea0cbc953f7e4b1044b4312c72
+  sha256: 15f14bb84b7823ede01ea5c142cfdbcb6250061d7bb5f22f64b8d8b2f8002621
 
 build:
   noarch: python
